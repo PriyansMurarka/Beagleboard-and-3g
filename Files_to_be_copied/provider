@@ -1,0 +1,16 @@
+connect "/usr/sbin/chat -v -f /etc/ppp/peers/chat.connect"
+disconnect "/usr/sbin/chat -v -f /etc/ppp/peers/chat.disconnect"
+/dev/ttyUSB3
+115200
+debug
+nodetach
+dump
+noauth
+idle 0
+user 6597462958
+usehostname
+crtscts
+modem
+noipdefault
+defaultroute
+usepeerdns

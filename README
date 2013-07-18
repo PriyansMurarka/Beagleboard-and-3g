@@ -1,0 +1,24 @@
+Beagleboard and 3G
+====================
+
+This script allows you to connect to a 3G dongle from a BeagleBoard.
+The following packages can be downloaded from http://www.angstrom-distribution.org/repo/ :
+
+usb-modeswitch-data
+usbmodeswitch
+ppp
+
+You can install them by using the following command:
+	$ opkg install usb-modeswitch-data
+	$ opkg install usbmodeswitch
+	$ opkg install ppp
+
+After installing the packages, run setup.sh as root.
+	$ sh setup.sh
+
+To check if your BeagleBoard has connected to a 3G network,
+	$ ifconfig
+
+and check for ppp0. If it gives a valid ip, it means that you have connected to a 3G network. If ppp0 is not present, then you haven't configured the system correctly. Please check if the correct packages are installed.
+	
+NOTE: Please ignore the output of the auto3g.sh file. Please check whether the package version is compatible with your BeagleBoard. This setup currently works for a TataDocomo3G datacard. Please change the service providers name in Files_to_be_copied/chat.connect file and then run the setup.sh file.
